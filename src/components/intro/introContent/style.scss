@@ -1,0 +1,228 @@
+@import "../../../style-config//mixins.scss";
+@import '../../../style-config/variable.scss';
+
+.intro-Content {
+    flex-grow: 1;
+    display: flex;
+    // align-items: flex-end;
+    padding-top: 30px;
+    @include small-screen{
+        padding-top: 0;
+     align-items: flex-end;
+     align-items: flex-end;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        @include small-screen{
+          flex-direction:row ;
+        
+        }
+        .left-col {
+            margin-left: 58px;
+            width: 100%;
+             @include small-screen{
+
+                width: 45%;
+             }
+
+            @include medium-screen {
+                padding-top: 55px;
+            }
+
+            @include large-screen {
+                padding-top: 0px;
+                width: 37%;
+            }
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                color: $white;
+                text-align: center;
+                @include large-screen{
+                    text-align: left
+                }
+                .small-text {
+                    
+                    @include typography(24px, 400, 30px);
+                    display: flex;
+                    align-items: center;
+                    margin-right: 90px;
+                    justify-content: center;
+                    @include large-screen{
+                        @include typography(42px, 400, 48px);
+                        justify-content: flex-start;
+                    }
+                    .icon {
+                        margin-left: 10px;
+                    }
+                }
+
+                .big-text {
+                    @include typography(32px, 400, 42px);
+                    margin-right:77px ;
+                    @include small-screen{
+                        @include typography(42px, 400, 52px);
+                     margin-right: 0;
+                    }
+               
+                }
+            }
+
+            p {
+                color: $white;
+                @include typography(13px, 400, 21px);
+                margin: 21px 0;
+                padding: 7px 11px;
+                text-align: center;
+                margin-right: 95px;
+                @include small-screen{ 
+                    text-align: left;
+                    @include typography(18px, 400, 24px);
+                    margin: 25px 0;
+                    padding: 0px;
+                 }
+
+            }
+            .CallToAction{
+                margin: 14px auto;
+                margin-left: 25px;
+                @include small-screen{
+                    margin: 0;
+                }
+            }
+        }
+
+        .right-col {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+             display: flex;
+            @include large-screen {
+                width: 63%;
+
+            }
+
+            img {
+                width: 49%;
+                display: block;
+                margin-bottom: 30px;
+                @include small-screen{
+                    margin-bottom: 40px;
+                    margin-left: 190px;
+                }
+                margin-left: 90px;
+
+                @include large-screen {
+                    margin-bottom: 50px;
+                    position: relative;
+                    right: -100px;
+                }
+            }
+
+            .highlight {
+                position: absolute;
+                border-radius: 6px;
+
+                @include glassmorphism-effect;
+                transform: scale(0.6);
+                @include small-screen{
+                    transform: scale(1);
+                }
+
+                .icon {
+                    width: 55px;
+                    height: 55px;
+                    min-width: 55px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: yellow;
+                    font-size: 24px;
+                    color: $black-light;
+
+                }
+
+                .text {
+                    padding: 0 7px;
+                    @include typography(18px, 400, 24px);
+                    color: $black-light ;
+
+                    span {
+                        @include typography(18px, 400, 24px);
+                    }
+
+
+                }
+
+                &.horizontal {
+                    width: 150px;
+                    height: 95px;
+                    display: flex;
+                    align-items: center;
+                    top: 165px;
+                    left: -25px;
+                    padding: 20px 10px 20px 20px;
+                       @include small-screen{
+                        top: 250px;
+                        left: 0;
+                       }
+                    @include medium-screen {
+                        top: 250px;
+                        left: 0;
+                    }
+
+                    @include large-screen {
+                        top: 270px;
+                        left: 120;
+                    }
+
+                }
+
+                &.verticle {
+                    width: 110px;
+                    height: 125px;
+                    min-height: 135px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    top: 50px;
+                    right: 0px;
+                    padding: 20px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                      @include small-screen{
+                        top: 50px;
+                    right: 60px;
+                      }
+                    @include medium-screen {
+                        top: 50px;
+                        right: 60px;
+                    }
+
+                    @include large-screen {
+                        top: 85px;
+                        right: -10px;
+                    }
+
+                    .text {
+                        padding: 0 10px;
+                        @include typography(14px, 400, 18px);
+                        color: $black-light;
+                        margin-top: 10px;
+
+                        span {
+                            @include typography(18px, 700, 24px);
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
